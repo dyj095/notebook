@@ -1,13 +1,33 @@
-# notebook
+# 02_QT5.11_ms2017_32bit安装
 
-## 一、批量修改代码编码字符集
-### 1、启动EditPlus，并打开需要修改代码编码字符集的文件
-![效果图1](https://github.com/dyj095/notebook/blob/master/imgs/1.png?raw=true)
-### 2、文档->文件编码->批量更改文件编码
-![效果图2](https://github.com/dyj095/notebook/blob/master/imgs/2.png?raw=true)
-### 3、在“文件选择对话框”，按住Ctrl键多选需要修改的文件后，点击【确定】
-![效果图3](https://github.com/dyj095/notebook/blob/master/imgs/3.png?raw=true)
-### 4、在“编码对话框”，选中需要修改的编码
-![效果图4](https://github.com/dyj095/notebook/blob/master/imgs/4.png?raw=true)
-### 5、点击EditPlus【关闭】按钮，当弹出保存确认框时，按住Shift
-![效果图5](https://github.com/dyj095/notebook/blob/master/imgs/5.png?raw=true)
+[原文请详见](https://blog.csdn.net/star714/article/details/51340162)
+
+## 一、资源下载 
+[百度网盘](https://pan.baidu.com/s/1bpzj2QzXJa2NN2IKkn6fmQ),密码pvx7，[原文详见](https://blog.csdn.net/m0_37719965/article/details/81005764)
+## 二、安装方法
+### 1. 首先确认Qt动态库已经成功安装(官方默认安装动态库);
+安装完成后 qmake.exe文件应在目录D:\Qt\Qt5.11.0\5.11.0\mingw53_32\bin中(也可以在其他分区盘中)
+### 2. 将msvc2017静态库解压到QT动态库目录下
+将下载的msvc2017_static.rar解压到Qt\Qt5.11.0\,代表动态库，解压完成后静态库的路径为：D:\Qt\Qt5.11.0\5.11.0\msvc2017_static，最后静态库qmake.exe文件应在目录D:\Qt\Qt5.11.0\5.11.0\msvc2017_static\bin中 
+### 3. 添加qt.conf配置文件
+在D:\Qt\Qt5.11.0\5.11.0\msvc2017_static\bin\下新建qt.conf，记事本打开并编辑：
+
+[paths]
+
+Prefix =D:/Qt/Qt5.11.0/5.11.0/msvc2017_static
+
+保存格式必须为ANSI格式
+### 4. 打开Qt Creator, 选择“工具”-> “选项”
+左侧“构建和运行”界面中“Qt Versios”->“添加”，将静态库qmake.exe添加进去<br>
+![效果图1](https://github.com/dyj095/notebook/blob/master/02_QT5.11_ms2017_32bit%E5%AE%89%E8%A3%85/imgs/1.png?raw=true)
+添加完成有可能静态库前的三角标是红色“!”号，此时解决办法参考
+http://www.cnblogs.com/andy65007/p/3493309.html
+一般qt.conf没设置对，参考步骤3将qt.conf再次检查一遍
+之后，“应用”->“确定”
+
+### 5. 设置“构建套件”，选择“工具”-> “选项”
+左侧“构建和运行”界面中“构建套件”->“添加”
+手动设置栏下，自己设置名字，比如QtStatic
+编译器、调试器、Qt版本如下设置
+![效果图1](https://github.com/dyj095/notebook/blob/master/02_QT5.11_ms2017_32bit%E5%AE%89%E8%A3%85/imgs/2.png?raw=true)
+之后，“应用”->“确定”
