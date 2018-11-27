@@ -36,22 +36,22 @@ http://www.cnblogs.com/andy65007/p/3493309.html
 ## 测试
 ### 1.测试：思想 , 动态库用来调试，静态库用来发布
 
-“新建文件或项目”->“Qt Widgets Application”->“选择”
+“新建文件或项目”->“Qt Widgets Application”->“选择”<br>
 ![效果图3](https://github.com/dyj095/notebook/blob/master/02_QT5.11_ms2017_32bit%E5%AE%89%E8%A3%85/imgs/3.png?raw=true)
 
-名称： testing   “下一步”
+名称： testing   “下一步”<br>
 ![效果图4](https://github.com/dyj095/notebook/blob/master/02_QT5.11_ms2017_32bit%E5%AE%89%E8%A3%85/imgs/4.png?raw=true)
 
-都选上，“下一步”
+都选上，“下一步”<br>
 ![效果图5](https://github.com/dyj095/notebook/blob/master/02_QT5.11_ms2017_32bit%E5%AE%89%E8%A3%85/imgs/5.png?raw=true)
 
-“下一步”直到完成
+“下一步”直到完成<br>
 ![效果图6](https://github.com/dyj095/notebook/blob/master/02_QT5.11_ms2017_32bit%E5%AE%89%E8%A3%85/imgs/6.png?raw=true)
 
-左下角“运行”三角按钮开始调试，此为动态库调试，运行成功的话就可以静态库调试发布了
+左下角“运行”三角按钮开始调试，此为动态库调试，运行成功的话就可以静态库调试发布了<br>
 ![效果图7](https://github.com/dyj095/notebook/blob/master/02_QT5.11_ms2017_32bit%E5%AE%89%E8%A3%85/imgs/7.png?raw=true)
 
 静态库调试发布
 
-Debug选择 Qstatic
-![效果图8](https://github.com/dyj095/notebook/blob/master/02_QT5.11_ms2017_32bit%E5%AE%89%E8%A3%85/imgs/8.png?raw=true)
+Debug选择 Qstatic<br>
+![效果图8](https://github.com/dyj095/notebook/blob/master/02_QT5.11_ms2017_32bit%E5%AE%89%E8%A3%85/imgs/8.jpg?raw=true)
