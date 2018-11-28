@@ -3,11 +3,14 @@
 
 ## 一、环境
 ### 1.VS 2017安装；
-### 2.ActivePerl安装；
-### 3.Python 2.7安装（不能用Python 3及以上版本，官方暂不支持）；
-### 4.Ruby安装；
-### 5.icu 解压即用，比如解压到C:\icu4c，并添加环境变量；
-### 6.openssl （不要以为版本号看起来更高就下载那个openssl-1.0.2h.tar.gz，该版本不兼容！）
+### 2.[ActivePerl安装](http://www.perl.org/get.html)；
+### 3.[Python 2.7安装](https://www.python.org/ftp/python/2.7.11/python-2.7.11.msi)
+（不能用Python 3及以上版本，官方暂不支持）；
+### 4.[Ruby安装](https://cache.ruby-lang.org/pub/ruby/2.3/ruby-2.3.1.tar.gz)；
+### 5.[icu](http://download.icu-project.org/files/icu4c/57.1/icu4c-57_1-Win32-msvc10.zip) 
+解压即用，比如解压到C:\icu4c，并添加环境变量；
+### 6.[openssl](https://www.openssl.org/source/openssl-1.0.1t.tar.gz) 
+（不要以为版本号看起来更高就下载那个openssl-1.0.2h.tar.gz，该版本不兼容！）
 > 编译openssl流程如下：<br>
 >> 1.解压下载的openssl源码，比如解压到C:\openssl-1.0.1t ；<br>
 >> 2.打开“VS2017 开发人员命令提示“；<br>
