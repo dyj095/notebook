@@ -6,7 +6,7 @@
 1.VS 2017安装；<br>
 2.[ActivePerl安装](http://www.perl.org/get.html)；<br>
 3.[Python 2.7安装](https://www.python.org/ftp/python/2.7.11/python-2.7.11.msi)<br>
-（不能用Python 3及以上版本，官方暂不支持）；
+（不能用Python 3及以上版本，官方暂不支持）；<br>
 4.[Ruby安装](https://cache.ruby-lang.org/pub/ruby/2.3/ruby-2.3.1.tar.gz)；<br>
 5.[icu](http://download.icu-project.org/files/icu4c/57.1/icu4c-57_1-Win32-msvc10.zip) <br>
 解压即用，比如解压到C:\icu4c，并添加环境变量；<br>
