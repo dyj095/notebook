@@ -3,7 +3,9 @@
 [原文请详见](https://blog.csdn.net/star714/article/details/51340162)
 
 ## 一、资源下载 
-[百度网盘](https://pan.baidu.com/s/1bpzj2QzXJa2NN2IKkn6fmQ),密码pvx7，[原文详见](https://blog.csdn.net/m0_37719965/article/details/81005764)
+### 1.[百度网盘](https://pan.baidu.com/s/1bpzj2QzXJa2NN2IKkn6fmQ),密码pvx7，[原文详见](https://blog.csdn.net/m0_37719965/article/details/81005764)
+
+### 2.[微云](https://share.weiyun.com/5DUilfC)
 ## 二、安装方法
 ### 1. 首先确认Qt动态库已经成功安装(官方默认安装动态库);
 安装完成后 qmake.exe文件应在目录D:\Qt\Qt5.11.0\5.11.0\mingw53_32\bin中(也可以在其他分区盘中)
