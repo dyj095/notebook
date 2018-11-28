@@ -1,7 +1,7 @@
 # 03_QT5.11_ms2017_32bit源码编译
 [原文详见 简书 作者：觉醒的苍红之刃](https://www.jianshu.com/p/d0ce6f1dcf56)
 
-包括WebEngineView
+> 这篇教程应用于Windows平台上要编译32bit的应用程序（包含Qt WebEngine模块）,由于Qt5.11中的WebEngine模块要求在Windows上必须得安装了VisualStudio2017(只有64bit)，QT安装的时候也只有一个ms2017 64bit的编译器，导致QT无法编译32bit的应用程序；解决方案就是手动将QT源码编译成32位的QT，也包括WebEngineView；
 ## 一、环境
 ### 1.VS 2017安装；
 ### 2.[ActivePerl安装](http://www.perl.org/get.html)；
