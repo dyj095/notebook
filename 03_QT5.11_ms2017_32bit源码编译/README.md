@@ -28,33 +28,33 @@
 2.解压；<br>
 3.打开qt-everywhere-src-5.11.0-rc2\qtwebengine\src\3rdparty\chromium\third_party\skia\src\core\SkEdge.cpp，
 找到第238行的
->> ```shell
->> // fCurveCount = SkToS8(1 << shift); 修改为
->> fCurveCount = SkToS8(1i64 << shift)//（已经不太确定这步是否需要）;
->> ```
+> ```shell
+> // fCurveCount = SkToS8(1 << shift); 修改为
+> fCurveCount = SkToS8(1i64 << shift)//（已经不太确定这步是否需要）;
+> ```
 4.打开 VS 2017的 x64_x86交叉工具命令提示符<br>
 ![图1](https://github.com/dyj095/notebook/blob/master/03_QT5.11_ms2017_32bit%E6%BA%90%E7%A0%81%E7%BC%96%E8%AF%91/imgs/1.webp)<br>
 5.执行命令
->> ```shell
->> cd /d + 你的Qt源码路径
->> configure -debug-and-release -opengl desktop -make libs -nomake tests -nomake examples -mp
->> // 其中会出现两个选择，分别输入o回车确认（估计没有人是用花钱的，如果是，那么选择另外一项），y回车确认。
->> ```
+> ```shell
+> cd /d + 你的Qt源码路径
+> configure -debug-and-release -opengl desktop -make libs -nomake tests -nomake examples -mp
+> // 其中会出现两个选择，分别输入o回车确认（估计没有人是用花钱的，如果是，那么选择另外一项），y回车确认。
+> ```
 6.执行命令<br>
-> 因为我要确认qtwebengine是否能编译成功，故执行以下的命令，如果不需要确认则去掉后边的module-qtwebengine执行nmake即可
->> ```shell
->> nmake module-qtwebengine
->> ```
-> 如果使用jom，则nmake替换成jom，jom是Qt官方工具，据说比nmake编译速度快
-> [jom安装教程](https://www.jianshu.com/p/0e6c91317327)
-> 如果是jom，那么执行
->> ```shell
->> jom module-qtwebengine
->> ```
-> 等几个小时编译好，编译速度取决于电脑性能，最后执行命令
->> ```shell
->> nmake install
->> ```
+因为我要确认qtwebengine是否能编译成功，故执行以下的命令，如果不需要确认则去掉后边的module-qtwebengine执行nmake即可
+> ```shell
+> nmake module-qtwebengine
+> ```
+如果使用jom，则nmake替换成jom，jom是Qt官方工具，据说比nmake编译速度快<br>
+[jom安装教程](https://www.jianshu.com/p/0e6c91317327)<br>
+如果是jom，那么执行<br>
+> ```shell
+> jom module-qtwebengine
+> ```
+等几个小时编译好，编译速度取决于电脑性能，最后执行命令<br>
+> ```shell
+> nmake install
+> ```
 7.完成后你会发现所有的东西都放在C盘Qt目录下了
 ![图2](https://github.com/dyj095/notebook/blob/master/03_QT5.11_ms2017_32bit%E6%BA%90%E7%A0%81%E7%BC%96%E8%AF%91/imgs/2.webp)
 
