@@ -28,7 +28,7 @@
 2.解压；<br>
 3.打开qt-everywhere-src-5.11.0-rc2\qtwebengine\src\3rdparty\chromium\third_party\skia\src\core\SkEdge.cpp，
 找到第238行的
-> ```shell
+> ```cpp
 > // fCurveCount = SkToS8(1 << shift); 修改为
 > fCurveCount = SkToS8(1i64 << shift)//（已经不太确定这步是否需要）;
 > ```
