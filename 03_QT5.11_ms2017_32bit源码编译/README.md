@@ -9,9 +9,9 @@
 ### 5.icu 解压即用，比如解压到C:\icu4c，并添加环境变量；
 ### 6.openssl （不要以为版本号看起来更高就下载那个openssl-1.0.2h.tar.gz，该版本不兼容！）
 > 编译openssl流程如下：<br>
->> #### 1.解压下载的openssl源码，比如解压到C:\openssl-1.0.1t ；<br>
->> #### 2.打开“VS2017 开发人员命令提示“；<br>
->> #### 3.执行命令<br>
+>> 1.解压下载的openssl源码，比如解压到C:\openssl-1.0.1t ；<br>
+>> 2.打开“VS2017 开发人员命令提示“；<br>
+>> 3.执行命令<br>
 >>> ```shell
 >>> cd C:\openssl-1.0.1t 
 >>> perl Configure VC-WIN32 no-asm –prefix=C:\openssl-1.0.1t\win32dll
@@ -20,18 +20,18 @@
 >>> nmake -f ms\ntdll.mak install
 >>> ```
 ## 二、QT源码编译
-> #### 1.下载Qt最新源码 [qt-everywhere-src-5.11.0-rc2.zip](https://download.qt.io/development_releases/qt/5.11/5.11.0-rc2/single/qt-everywhere-src-5.11.0-rc2.zip)
-> #### 2.解压；
-> #### 3.打开qt-everywhere-src-5.11.0-rc2\qtwebengine\src\3rdparty\chromium\third_party\skia\src\core\SkEdge.cpp，找到第238行的fCurveCount = SkToS8(1 << shift); 修改为fCurveCount = SkToS8(1i64 << shift)（已经不太确定这步是否需要）;
-> #### 4.打开 VS 2017的 x64_x86交叉工具命令提示符
+> 1.下载Qt最新源码 [qt-everywhere-src-5.11.0-rc2.zip](https://download.qt.io/development_releases/qt/5.11/5.11.0-rc2/single/qt-everywhere-src-5.11.0-rc2.zip)
+> 2.解压；
+> 3.打开qt-everywhere-src-5.11.0-rc2\qtwebengine\src\3rdparty\chromium\third_party\skia\src\core\SkEdge.cpp，找到第238行的fCurveCount = SkToS8(1 << shift); 修改为fCurveCount = SkToS8(1i64 << shift)（已经不太确定这步是否需要）;
+> 4.打开 VS 2017的 x64_x86交叉工具命令提示符
 ![图1](https://github.com/dyj095/notebook/blob/master/03_QT5.11_ms2017_32bit%E6%BA%90%E7%A0%81%E7%BC%96%E8%AF%91/imgs/1.webp)
-> #### 5.执行命令
+> 5.执行命令
 >> ```shell
 >> cd /d + 你的Qt源码路径
 >> configure -debug-and-release -opengl desktop -make libs -nomake tests -nomake examples -mp
 >> // 其中会出现两个选择，分别输入o回车确认（估计没有人是用花钱的，如果是，那么选择另外一项），y回车确认。
 >> ```
-> #### 6.执行命令
+> 6.执行命令
 > 因为我要确认qtwebengine是否能编译成功，故执行以下的命令，如果不需要确认则去掉后边的module-qtwebengine执行nmake即可
 >> ```shell
 >> nmake module-qtwebengine
