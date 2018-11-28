@@ -12,17 +12,17 @@
 解压即用，比如解压到C:\icu4c，并添加环境变量；<br>
 6.[openssl](https://www.openssl.org/source/openssl-1.0.1t.tar.gz) <br>
 （不要以为版本号看起来更高就下载那个openssl-1.0.2h.tar.gz，该版本不兼容！）
-> 编译openssl流程如下：<br>
->> 1.解压下载的openssl源码，比如解压到C:\openssl-1.0.1t ；<br>
->> 2.打开“VS2017 开发人员命令提示“；<br>
->> 3.执行命令<br>
->>> ```shell
->>> cd C:\openssl-1.0.1t 
->>> perl Configure VC-WIN32 no-asm –prefix=C:\openssl-1.0.1t\win32dll
->>> ms\do_ms
->>> nmake -f ms\ntdll.mak
->>> nmake -f ms\ntdll.mak install
->>> ```
+### 编译openssl流程如下：<br>
+> 1.解压下载的openssl源码，比如解压到C:\openssl-1.0.1t ；<br>
+> 2.打开“VS2017 开发人员命令提示“；<br>
+> 3.执行命令<br>
+>> ```shell
+>> cd C:\openssl-1.0.1t 
+>> perl Configure VC-WIN32 no-asm –prefix=C:\openssl-1.0.1t\win32dll
+>> ms\do_ms
+>> nmake -f ms\ntdll.mak
+>> nmake -f ms\ntdll.mak install
+>> ```
 ## 二、QT源码编译
 1.下载Qt最新源码 [qt-everywhere-src-5.11.0-rc2.zip](https://download.qt.io/development_releases/qt/5.11/5.11.0-rc2/single/qt-everywhere-src-5.11.0-rc2.zip)<br>
 2.解压；<br>
