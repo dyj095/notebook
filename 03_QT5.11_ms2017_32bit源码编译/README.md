@@ -1,6 +1,7 @@
 # 03_QT5.11_ms2017_32bit源码编译
 [原文详见 简书 作者：觉醒的苍红之刃](https://www.jianshu.com/p/d0ce6f1dcf56)
 
+包括WebEngineView
 ## 一、环境
 ### 1.VS 2017安装；
 ### 2.[ActivePerl安装](http://www.perl.org/get.html)；
