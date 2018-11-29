@@ -1,7 +1,8 @@
 # 03_QT5.11_ms2017_32bit源码编译
 [原文详见 简书 作者：觉醒的苍红之刃](https://www.jianshu.com/p/d0ce6f1dcf56)
 
-> 这篇教程应用于Windows平台上要编译32bit的应用程序（包含Qt WebEngine模块）,由于Qt5.11中的WebEngine模块要求在Windows上必须得安装了VisualStudio2017(只有64bit)，QT安装的时候也只有一个ms2017 64bit的编译器，导致QT无法编译32bit的应用程序；解决方案就是手动将QT源码编译成32位的QT，也包括WebEngineView；
+> 这篇教程应用于Windows平台上要编译32bit的应用程序（包含Qt WebEngine模块）,由于Qt5.12中的WebEngine模块要求在Windows上必须得安装了VisualStudio2017(只有64bit)，QT安装的时候也只有一个ms2017 64bit的编译器，导致QT无法编译32bit的应用程序；解决方案就是手动将QT源码编译成32位的QT，也包括WebEngineView；<br>
+> Qt5.11编译失败，原因是在编译过程中由于VS2017 15.8 std::aligned_storage error导致编译中止，所以改为编译Qt5.12
 ## 一、环境
 1.VS 2017安装；<br>
 2.[ActivePerl安装](http://www.perl.org/get.html)；<br>
@@ -36,38 +37,32 @@
 >> nmake -f ms\ntdll.mak install
 >> ```
 ## 二、QT源码编译
-1.下载Qt最新源码 [qt-everywhere-src-5.11.0-rc2.zip](https://download.qt.io/development_releases/qt/5.11/5.11.0-rc2/single/qt-everywhere-src-5.11.0-rc2.zip)<br>
-2.解压；<br>
-3.打开qt-everywhere-src-5.11.0-rc2\qtwebengine\src\3rdparty\chromium\third_party\skia\src\core\SkEdge.cpp，
-找到第238行的
-> ```cpp
-> // fCurveCount = SkToS8(1 << shift); 修改为
-> fCurveCount = SkToS8(1i64 << shift)//（已经不太确定这步是否需要）;
-> ```
-4.打开 VS 2017的 x64_x86交叉工具命令提示符<br>
+1.下载Qt最新源码 [qt-everywhere-src-5.12.0-rc2.zip](https://download.qt.io/development_releases/qt/5.12/5.12.0-rc2/single/qt-everywhere-src-5.12.0-rc2.zip)<br>
+2.解压到D:\Qt\static\qt-everywhere-src-5.12.0-rc2；<br>
+3.打开 VS 2017的 x64_x86交叉工具命令提示符<br>
 ![图1](https://github.com/dyj095/notebook/blob/master/03_QT5.11_ms2017_32bit%E6%BA%90%E7%A0%81%E7%BC%96%E8%AF%91/imgs/1.webp)<br>
-5.执行命令
+4.执行命令
 > ```shell
-> cd /d + 你的Qt源码路径
-> configure -debug-and-release -opengl desktop -make libs -nomake tests -nomake examples -mp
+> cd D:\Qt\static\qt-everywhere-src-5.12.0-rc2
+> configure --prefix=D:\Qt\static\qt-static-5.12  -shared "-D_ENABLE_EXTENDED_ALIGNED_STORAGE=1" -debug-and-release -opensource -nomake examples -pch -opengl
 > // 其中会出现两个选择，分别输入o回车确认（估计没有人是用花钱的，如果是，那么选择另外一项），y回车确认。
 > ```
-6.执行命令<br>
+5.执行命令<br>
 因为我要确认qtwebengine是否能编译成功，故执行以下的命令，如果不需要确认则去掉后边的module-qtwebengine执行nmake即可
 > ```shell
-> nmake module-qtwebengine
+> //nmake module-qtwebengine
+> nmake & nmake install
 > ```
 如果使用jom，则nmake替换成jom，jom是Qt官方工具，据说比nmake编译速度快<br>
 [jom安装教程](https://www.jianshu.com/p/0e6c91317327)<br>
 如果是jom，那么执行<br>
 > ```shell
-> jom module-qtwebengine
+> //jom module-qtwebengine
+> jom & jom install
 > ```
-等几个小时编译好，编译速度取决于电脑性能，最后执行命令<br>
-> ```shell
-> nmake install
-> ```
-7.完成后你会发现所有的东西都放在C盘Qt目录下了
+等几个小时编译好，编译速度取决于电脑性能<br>
+
+6.完成后你会发现所有的东西都放在C盘Qt目录下了
 ![图2](https://github.com/dyj095/notebook/blob/master/03_QT5.11_ms2017_32bit%E6%BA%90%E7%A0%81%E7%BC%96%E8%AF%91/imgs/2.webp)
 
 ## 三、报错记录
