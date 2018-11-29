@@ -27,10 +27,10 @@
 ### 编译openssl流程如下：<br>
 > 1.解压下载的openssl源码，比如解压到C:\openssl-1.0.1t ；<br>
 > 2.打开“VS2017 开发人员命令提示“；<br>
-> 3.执行命令<br>
+> 3.打开 VS 2017的 x64_x86交叉工具命令提示符,执行命令<br>
 >> ```shell
 >> cd C:\openssl-1.0.1t 
->> perl Configure VC-WIN32 no-asm –prefix=C:\openssl-1.0.1t\win32dll
+>> perl Configure VC-WIN32 --prefix=D:\program\openssl
 >> ms\do_ms
 >> nmake -f ms\ntdll.mak
 >> nmake -f ms\ntdll.mak install
