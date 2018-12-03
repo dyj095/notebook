@@ -51,7 +51,7 @@
 > REM SET PATH=%_ROOT%\qtrepotools\bin;%PATH%
 > SET _ROOT=
 > ```
-将以上内容保存为qt5vars.bat,保存到D:\Qt\static\qt-everywhere-src-5.12.0-rc2\目录下；
+将以上内容保存为qt5vars.bat,保存到D:\Qt\static\qt-everywhere-src-5.12.0-rc2\目录下；<br>
 5.执行命令
 > ```shell
 > cd D:\Qt\static\qt-everywhere-src-5.12.0-rc2
@@ -74,7 +74,7 @@
 > ```
 等几个小时编译好，编译速度取决于电脑性能<br>
 
-6.完成后你会发现所有的东西都放在C盘Qt目录下了
+7.完成后你会发现所有的东西都放在C盘Qt目录下了
 ![图2](https://github.com/dyj095/notebook/blob/master/03_QT5.11_ms2017_32bit%E6%BA%90%E7%A0%81%E7%BC%96%E8%AF%91/imgs/2.webp)
 
 ## 三、报错记录
