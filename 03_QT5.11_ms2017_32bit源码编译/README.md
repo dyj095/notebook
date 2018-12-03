@@ -41,13 +41,25 @@
 2.解压到D:\Qt\static\qt-everywhere-src-5.12.0-rc2；<br>
 3.打开 VS 2017的 x64_x86交叉工具命令提示符<br>
 ![图1](https://github.com/dyj095/notebook/blob/master/03_QT5.11_ms2017_32bit%E6%BA%90%E7%A0%81%E7%BC%96%E8%AF%91/imgs/1.webp)<br>
-4.执行命令
+4.设置环境
+> ```shell
+> REM Set up \Microsoft Visual Studio 2017, where <arch> is \c amd64, \c x86, etc.
+> CALL "D:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvars32"
+> SET _ROOT=D:\Qt\static\qt-everywhere-src-5.12.0-rc2
+> SET PATH=%_ROOT%\qtbase\bin;%_ROOT%\gnuwin32\bin;%PATH%
+> REM Uncomment the below line when using a git checkout of the source repository
+> REM SET PATH=%_ROOT%\qtrepotools\bin;%PATH%
+> SET _ROOT=
+> ```
+将以上内容保存为qt5vars.bat,保存到D:\Qt\static\qt-everywhere-src-5.12.0-rc2\目录下；
+5.执行命令
 > ```shell
 > cd D:\Qt\static\qt-everywhere-src-5.12.0-rc2
-> configure --prefix=D:\Qt\static\qt-static-5.12  -shared "-D_ENABLE_EXTENDED_ALIGNED_STORAGE=1" -debug-and-release -opensource -nomake examples -pch -opengl
+> D:\Qt\static\qt-everywhere-src-5.12.0-rc2\qt5vars.bat
+> configure --prefix=D:\Qt\static\qt-static-5.12 -debug-and-release -nomake examples -nomake tests -opensource
 > // 其中会出现两个选择，分别输入o回车确认（估计没有人是用花钱的，如果是，那么选择另外一项），y回车确认。
 > ```
-5.执行命令<br>
+6.执行命令<br>
 因为我要确认qtwebengine是否能编译成功，故执行以下的命令，如果不需要确认则去掉后边的module-qtwebengine执行nmake即可
 > ```shell
 > //nmake module-qtwebengine
