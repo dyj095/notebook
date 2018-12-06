@@ -9,3 +9,7 @@
 ## 3、03_QT5.12_ms2017_32bit源码编译  
 [[点击查看详情]](https://github.com/dyj095/notebook/blob/master/03_QT5.11_ms2017_32bit%E6%BA%90%E7%A0%81%E7%BC%96%E8%AF%91/README.md)<br>
 > 这篇教程应用于Windows平台上要编译32bit的应用程序（包含Qt WebEngine模块）,由于Qt5.11中的WebEngine模块要求在Windows上必须得安装了VisualStudio2017(只有64bit)，QT安装的时候也只有一个ms2017 64bit的编译器，导致QT无法编译32bit的应用程序；
+
+## 4、04_QT程序发布_Ubuntu
+[[点击查看详情]](https://github.com/dyj095/notebook/tree/master/04_QT%E7%A8%8B%E5%BA%8F%E5%8F%91%E5%B8%83_Ubuntu/README.md)<br>
+>将ubuntu16.04的qt编译环境，发布到没有qt环境的ubuntu16.04的机器上;采用的方式是linuxdeployqt命令方式
