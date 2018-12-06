@@ -11,7 +11,7 @@ CONFIG += -finput-charset=UTF-8
 第一个参数指定窄字符或窄字符串的字面值常量的内部编码方式，默认为UTF-8。例如指定此选项为GBK，则窄字符或窄字符串常量将会以GBK编码方式存储而不是默认的UTF-8编码方式。
 
 第二个参数，可能不需要加，加了第一个参数后还有乱码可以试试这个，意思是指定源文件的文件编码。
-![img](https://github.com/dyj095/notebook/blob/master/04_QT%E7%A8%8B%E5%BA%8F%E5%8F%91%E5%B8%83_Ubuntu/imgs/1.png)
+![img](https://github.com/dyj095/notebook/blob/master/07_QT_windows%E4%B8%8B%E4%BD%BF%E7%94%A8MinGw%E7%BC%96%E8%AF%91%E5%87%BA%E7%8E%B0%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/imgs/1.png)
 
 ## 2、如果你是直接编译
 ```shell
