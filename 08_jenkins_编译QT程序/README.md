@@ -19,23 +19,23 @@
 :: Generating Makefile |
 :: =====================
 
-"D:/qt/Qt5.6.3/5.6.3/mingw49_32/bin/qmake.exe" D:/elink/Jenkins/workspace/QT_elink/QT_elink.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug" && D:/Qt/Qt5.11.0/Tools/mingw530_32/bin/mingw32-make.exe qmake_all
+"D:/qt/Qt5.6.3/5.6.3/mingw49_32/bin/qmake.exe" D:/elink/Jenkins/workspace/QT_elink/QT_elink.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug" && D:/qt/Qt5.6.3/Tools/mingw492_32/bin/mingw32-make.exe qmake_all
 
 :: ===========
 :: Compiling |
 :: ===========
 
-"D:/qt/Qt5.6.3/Tools/mingw492_32/bin/mingw32-make.exe" -f D:/elink/Jenkins/workspace/QT_elink/Makefile.Debug
+rem "D:/qt/Qt5.6.3/Tools/mingw492_32/bin/mingw32-make.exe" -f D:/elink/Jenkins/workspace/QT_elink/Makefile.Debug
 
 :: ======================================
 :: Moving .dll to the project directory |
 :: ======================================
 
-copy "D:\qt\Qt5.6.3\5.6.3\mingw49_32\bin\Qt5Cored.dll"       D:\elink\Jenkins\workspace\QT_elink\debug\Qt5Cored.dll
-copy "D:\qt\Qt5.6.3\5.6.3\mingw49_32\bin\Qt5Widgetsd.dll"    D:\elink\Jenkins\workspace\QT_elink\debug\Qt5Widgetsd.dll
-copy "D:\qt\Qt5.6.3\5.6.3\mingw49_32\bin\Qt5Guid.dll"        D:\elink\Jenkins\workspace\QT_elink\debug\Qt5Guid.dll
-copy "D:\qt\Qt5.6.3\5.6.3\mingw49_32\bin\libgcc_s_dw2-1.dll" D:\elink\Jenkins\workspace\QT_elink\debug\libgcc_s_dw2-1.dll
-copy "D:\qt\Qt5.6.3\5.6.3\mingw49_32\bin\libstdc++-6.dll"    "D:\elink\Jenkins\workspace\QT_elink\debug\libstdc++-6.dll"
+rem copy "D:\qt\Qt5.6.3\5.6.3\mingw49_32\bin\Qt5Cored.dll"       D:\elink\Jenkins\workspace\QT_elink\debug\Qt5Cored.dll
+rem copy "D:\qt\Qt5.6.3\5.6.3\mingw49_32\bin\Qt5Widgetsd.dll"    D:\elink\Jenkins\workspace\QT_elink\debug\Qt5Widgetsd.dll
+rem copy "D:\qt\Qt5.6.3\5.6.3\mingw49_32\bin\Qt5Guid.dll"        D:\elink\Jenkins\workspace\QT_elink\debug\Qt5Guid.dll
+rem copy "D:\qt\Qt5.6.3\5.6.3\mingw49_32\bin\libgcc_s_dw2-1.dll" D:\elink\Jenkins\workspace\QT_elink\debug\libgcc_s_dw2-1.dll
+rem copy "D:\qt\Qt5.6.3\5.6.3\mingw49_32\bin\libstdc++-6.dll"    "D:\elink\Jenkins\workspace\QT_elink\debug\libstdc++-6.dll"
 
-copy "D:\qt\Qt5.6.3\5.6.3\mingw49_32\bin\libwinpthread-1.dll"    "D:\elink\Jenkins\workspace\QT_elink\debug\libwinpthread-1.dll"
+rem copy "D:\qt\Qt5.6.3\5.6.3\mingw49_32\bin\libwinpthread-1.dll"    "D:\elink\Jenkins\workspace\QT_elink\debug\libwinpthread-1.dll"
 ```
