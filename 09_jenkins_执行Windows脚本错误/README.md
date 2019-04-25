@@ -1,5 +1,5 @@
 # 09_jenkins_执行Windows脚本错误
-Jenkins编译后执行bat脚本将文件复制到windows共享目录下，在cmd下可以执行，但在Jenkins下执行bat就会报发生系统错误1312.
+Jenkins编译后执行bat脚本将文件复制到windows共享目录下，在cmd下可以执行，但在Jenkins下执行bat就会报发生系统错误1312.<br>
 ![img](https://github.com/dyj095/notebook/blob/master/09_jenkins_%E6%89%A7%E8%A1%8CWindows%E8%84%9A%E6%9C%AC%E9%94%99%E8%AF%AF/imgs/2.png)
 
 ## 解决方案
