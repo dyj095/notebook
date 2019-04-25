@@ -17,3 +17,11 @@
 ## 7、07_QT_windows下使用MinGw编译出现中文乱码问题解决
 [[点击查看详情]](https://github.com/dyj095/notebook/blob/master/07_QT_windows%E4%B8%8B%E4%BD%BF%E7%94%A8MinGw%E7%BC%96%E8%AF%91%E5%87%BA%E7%8E%B0%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/README.md)<br>
 > QT在Windows下如果采用MSVC2017_64编译器进行编译程序后，服务器返回的json中有中文显示也是正常的；但是如果采用Mingw_32编译器进行编译后，服务器返回的JSON中的所有中文显示都是乱码；
+
+## 8、08_jenkins_编译QT程序
+[[点击查看详情]](https://github.com/dyj095/notebook/blob/master/08_jenkins_%E7%BC%96%E8%AF%91QT%E7%A8%8B%E5%BA%8F/README.md)<br>
+> 通过Jenkins在Windows上使用mingw编译器对Qt程序进行编译生成exe；
+
+## 9、09_jenkins_执行Windows脚本错误
+[[点击查看详情]](https://github.com/dyj095/notebook/blob/master/09_jenkins_%E6%89%A7%E8%A1%8CWindows%E8%84%9A%E6%9C%AC%E9%94%99%E8%AF%AF/README.md)<br>
+> Jenkins编译后执行bat脚本将文件复制到windows共享目录下，在cmd下可以执行，但在Jenkins下执行bat就会报发生系统错误1312；
